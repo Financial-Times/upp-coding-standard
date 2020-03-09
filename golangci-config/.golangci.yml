@@ -29,7 +29,6 @@ linters:
     - structcheck
     - stylecheck
     - typecheck
-    - unused
     - varcheck
 
 run:
