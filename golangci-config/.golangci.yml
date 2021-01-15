@@ -17,6 +17,7 @@ linters:
     - bodyclose
     - deadcode
     - errcheck
+    - gocyclo
     - gofmt
     - goimports
     - golint
@@ -32,6 +33,10 @@ linters:
     - unused
     - varcheck
     - whitespace
+
+linters-settings:
+  gocyclo:
+    min-complexity: 15
 
 run:
   skip-dirs:
