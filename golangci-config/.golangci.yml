@@ -30,6 +30,7 @@ linters:
     - structcheck
     - stylecheck
     - typecheck
+    - unparam
     - unused
     - varcheck
     - whitespace
