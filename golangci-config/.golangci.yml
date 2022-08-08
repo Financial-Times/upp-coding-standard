@@ -2,42 +2,40 @@ linters-settings:
   govet:
     check-shadowing: true
     settings:
-      printf:
-        funcs:
-          - (github.com/golangci/golangci-lint/pkg/logutils.Log).Infof
-          - (github.com/golangci/golangci-lint/pkg/logutils.Log).Warnf
-          - (github.com/golangci/golangci-lint/pkg/logutils.Log).Errorf
-          - (github.com/golangci/golangci-lint/pkg/logutils.Log).Fatalf
+    printf:
+    funcs:
+    - (github.com/golangci/golangci-lint/pkg/logutils.Log).Infof
+    - (github.com/golangci/golangci-lint/pkg/logutils.Log).Warnf
+    - (github.com/golangci/golangci-lint/pkg/logutils.Log).Errorf
+    - (github.com/golangci/golangci-lint/pkg/logutils.Log).Fatalf
   revive:
     confidence: 0
+  gocognit:
+    min-complexity: 20
 
 linters:
   disable-all: true
   enable:
-    - bodyclose
-    - deadcode
-    - errcheck
-    - gocognit
-    - gofmt
-    - goimports
-    - gosec
-    - gosimple
-    - govet
-    - ineffassign
-    - misspell
-    - revive
-    - staticcheck
-    - structcheck
-    - stylecheck
-    - typecheck
-    - unparam
-    - unused
-    - varcheck
-    - whitespace
-
-linters-settings:
-  gocognit:
-    min-complexity: 20
+      - bodyclose
+      - deadcode
+      - errcheck
+      - gocognit
+      - gofmt
+      - goimports
+      - gosec
+      - gosimple
+      - govet
+      - ineffassign
+      - misspell
+      - revive
+      - staticcheck
+      - structcheck
+      - stylecheck
+      - typecheck
+      - unparam
+      - unused
+      - varcheck
+      - whitespace
 
 run:
   skip-dirs:
